@@ -1,9 +1,8 @@
-package junyeong.yu.inheritance;
+package junyeong.yu.basic.ch01inheritance;
 
-import junyeong.yu.inheritance.composition.ChildComposition;
-import junyeong.yu.inheritance.composition.ParentComposition;
-import junyeong.yu.inheritance.composition.ParentExcellentCompostion;
-import junyeong.yu.inheritance.composition.ParentKindCompostion;
+import junyeong.yu.basic.ch01inheritance.composition.ChildComposition;
+import junyeong.yu.basic.ch01inheritance.composition.ParentComposition;
+import junyeong.yu.basic.ch01inheritance.composition.ParentKindCompostion;
 
 /**
  * Created by yujun-yeong on 16-07-15.
