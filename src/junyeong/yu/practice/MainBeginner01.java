@@ -3,7 +3,7 @@ package junyeong.yu.practice;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainBeginner {
+public class MainBeginner01 {
     public static void main(String[] args) {
         // bad because it is impossible to use loop for this.
         long id = 3;
@@ -88,7 +88,7 @@ public class MainBeginner {
 
     } // of main()
 
-    static class Student {
+    private static class Student {
         public Student() {} // default constructor
         public Student(long id, String name, int age, String location) {
             this.id = id;
