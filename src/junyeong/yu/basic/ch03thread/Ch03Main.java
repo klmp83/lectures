@@ -43,17 +43,17 @@ public class Ch03Main {
 
         @Override
         public void run() {
-            for (int i = 0; i < 50000000; i++) {
+            for (int i = 0; i < 500000000; i++) {
                 //System.out.print(this.name + "-" + i + ",");
                 //this.sharedResource.count++;
-                //this.sharedResource.increaseNoSync();
-                this.sharedResource.increaseSync();
+                this.sharedResource.increaseNoSync();
+                //this.sharedResource.increaseSync();
                 if (i % 10 == 0) {
                     //System.out.println();
                 }
             }
             System.out.println("(" + name + ")" + " count :" + this.sharedResource.countNoSync);
-            System.out.println("(" + name + ")" + " count :" + this.sharedResource.countSync);
+            //System.out.println("(" + name + ")" + " count :" + this.sharedResource.countSync);
         }
     }
 }
