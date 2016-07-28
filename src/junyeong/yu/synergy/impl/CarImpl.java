@@ -1,11 +1,7 @@
 package junyeong.yu.synergy.impl;
 
-import junyeong.yu.com.Body;
-import junyeong.yu.com.Car;
-import junyeong.yu.com.Engine;
-import junyeong.yu.com.GasTank;
-import junyeong.yu.com.GearState;
-import junyeong.yu.com.Transmission;
+
+import junyeong.yu.synergy.*;
 
 // TODO : remove abstract & implement --> temporarily remain due to compile error
 public class CarImpl implements Car {
