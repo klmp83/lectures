@@ -10,8 +10,9 @@ public interface Car {
 	//		Transmission: GearState -> Neutral / Drive / Park / Reverse
 	
 	// abstract concept --> facade concept --> need to move car facade
-	public void startCar(); // how about accelerating? --> (turn on key -> turn on engine -> check oil level (gas tank level)  -> shift gear to drive -> check door -> accelerating)
-	public void stopCar(); // how about breaking? --> (breaking -> shift gear to neutral -> turn off engine)	
+	public void startCar(); // how about accelerating? --> (turn on key -> turn on engine -> check oil level (gas tank level)  -> shift gear to drive -> check door)
+	//public void moveCar(); // --> DELETE because it is not function but state
+    public void stopCar(); // how about breaking? --> (breaking -> shift gear to neutral -> turn off engine)
 	
 	public void turnOn(); // by key
 	public void turnOff(); // by key
@@ -19,9 +20,11 @@ public interface Car {
 	public void openDoor(); // check door before staring engine
 	public void closeDoor();
 	
-	public void accelerating(); // by Junyeong
-	public void breaking(); // by Junyeong
-	
+	public void pushAccelerator();
+	public void releaseAccelerator();
+    public void pushBreaker();
+    public void releaseBreaker();
+
 	// TODO : below return types should be changed to proper types
 	public String getCarState(); // moving / stop
 	public String getEngineState(); // running / stop

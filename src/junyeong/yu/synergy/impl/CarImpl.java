@@ -9,27 +9,48 @@ public class CarImpl implements Car {
 	private Engine engine;
 	private GasTank gasTank;
 	private Transmission transmission;
-	private int elapsedTime;
-	
-	@Override
-	public void startCar() {
-		turnOn();
-		//checkOilLevel();
-		shiftGear(null);
+
+    private Time time;
+
+    public void setTransmission(Transmission transmission) {
+        this.transmission = transmission;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
+    @Override
+	public void startCar() { // preparation of car to move. not including moving.
+        pushBreaker();
+        shiftGear(this.transmission.getGearStateNeutral()); // or park
+        releaseBreaker();
+        turnOn();
+		shiftGear(this.transmission.getGearStateDrive());
 		//checkDoor();
-		accelerating();
+		//pushAccelerator();
 	}
-	
-	@Override
+
+    /*@Override
+    public void moveCar() {
+        pushAccelerator();
+        releaseAccelerator();
+        pushBreaker();
+        releaseBreaker();
+    }*/
+
+    @Override
 	public void stopCar() {
-		breaking();
-		shiftGear(null);
+		pushBreaker();
+		shiftGear(this.transmission.getGearStatePark());
+        releaseBreaker();
 		turnOff();
 	}
 	
 	@Override
 	public void turnOn() {
-		engine.turnOn();
+        engine.turnOn();
+
 	}
 	@Override
 	public void turnOff() {
@@ -51,15 +72,26 @@ public class CarImpl implements Car {
 	}
 	
 	@Override
-	public void accelerating() {
+	public void pushAccelerator() {
 		// TODO Auto-generated method stub
 	}
-	@Override
-	public void breaking() {
+
+    @Override
+    public void releaseAccelerator() {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+	public void pushBreaker() {
 		// TODO Auto-generated method stub
 	}
-	
-	@Override
+
+    @Override
+    public void releaseBreaker() {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
 	public String getCarState() {
 		// TODO Auto-generated method stub
 		return null;
