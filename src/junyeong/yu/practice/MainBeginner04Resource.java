@@ -30,7 +30,7 @@ public class MainBeginner04Resource {
         highSchoolStudent.initialize();
         highSchoolStudent.save();
         highSchoolStudent.load();
-        //highSchoolStudent.close();
+        highSchoolStudent.close();
 
         System.out.println(highSchoolStudent.description());
 
@@ -73,7 +73,8 @@ public class MainBeginner04Resource {
             String dataToSend = "For Network Test";
             byte[] b = dataToSend.getBytes(Charset.forName("UTF-8"));
             try {
-                output.write(b);
+                //output.write(b);
+                output.write(b, 0, b.length);
                 output.flush();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -82,14 +83,28 @@ public class MainBeginner04Resource {
 
         @Override
         public Student load() {
-
+            try {
+                StringBuffer sb = new StringBuffer();
+                for (int i; (i = input.read()) != -1;) {
+                    sb.append((char)i);
+                }
+                System.out.println("result from server : " + sb.toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             return null;
         }
 
         @Override
         public void close() {
-
+            try {
+                output.close();
+                input.close();
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

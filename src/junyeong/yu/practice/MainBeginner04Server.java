@@ -1,10 +1,13 @@
 package junyeong.yu.practice;
 
+import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,14 +43,20 @@ public class MainBeginner04Server {
                 input = socket.getInputStream();
                 output = socket.getOutputStream();
 
-                StringBuffer sb = new StringBuffer();
-                for (int i; (i = input.read()) != -1;) {
-                    sb.append((char)i);
-                }
+                byte[] buffer = new byte[1024];
+                input.read(buffer, 0, buffer.length);
+                String result = new String(buffer, StandardCharsets.UTF_8);
 
-                memory.put("data", sb.toString());
-                System.out.print(sb.toString());
+                System.out.println("result: " + result);
 
+                //memory.put("data", sb.toString());
+                //System.out.print("result: "+ sb.toString());
+
+                byte[] b = "Replied from Server".getBytes(Charset.forName("UTF-8"));
+                output.write(b);
+
+                input.close();
+                output.close();
                 socket.close();
             }
             catch (Exception e) {
