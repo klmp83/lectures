@@ -3,7 +3,7 @@ package junyeong.yu.basic.ch03thread;
 /**
  * Created by yujun-yeong on 16-07-21.
  */
-public class Ch03Main {
+public class Ch03MainThread {
     public static void main(String[] args) throws Exception {
         SharedResource sharedResource = new SharedResource();
         Actor actorA = new Actor("A");
