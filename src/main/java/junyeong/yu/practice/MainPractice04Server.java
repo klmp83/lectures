@@ -1,6 +1,5 @@
 package junyeong.yu.practice;
 
-import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetAddress;
@@ -14,10 +13,10 @@ import java.util.Map;
 /**
  * Created by yujun-yeong on 16-07-21.
  */
-public class MainBeginner04Server {
+public class MainPractice04Server {
 
     public static void main(String[] args) {
-        MainBeginner04Server server = new MainBeginner04Server();
+        MainPractice04Server server = new MainPractice04Server();
         server.await();
     }
 

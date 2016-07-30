@@ -3,7 +3,7 @@ package junyeong.yu.practice;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainBeginner01 {
+public class MainPractice01 {
     public static void main(String[] args) {
         // bad because it is impossible to use loop for this.
         long id = 3;

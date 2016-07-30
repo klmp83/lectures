@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by yujun-yeong on 16-07-20.
  */
-public class MainBeginner02 {
+public class MainPractice02 {
 
     public static void main(String args[]) throws Exception {
         List<StudentDescript> studentList = new ArrayList<>();

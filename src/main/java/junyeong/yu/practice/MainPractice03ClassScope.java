@@ -1,6 +1,6 @@
 package junyeong.yu.practice;
 
-public class MainBeginner03ClassScope {
+public class MainPractice03ClassScope {
 	public static void main(String[] args) throws Exception {
 		// This is static main method : static --call--> static
 		System.out.println(JustClass.staticVariable);
