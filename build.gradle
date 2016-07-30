@@ -1,0 +1,12 @@
+apply plugin: 'idea'
+//and standard one
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.38'
+}

@@ -12,10 +12,12 @@ public class CarImpl implements Car {
 
     private Time time;
 
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
     public void setTransmission(Transmission transmission) {
         this.transmission = transmission;
     }
-
     public void setTime(Time time) {
         this.time = time;
     }
