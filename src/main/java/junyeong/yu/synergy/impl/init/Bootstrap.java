@@ -18,8 +18,13 @@ public class Bootstrap {
         car.setTransmission(new TransmissionImpl());
         car.setTime(new TimeImpl());
 
+        car.closeDoor();
+        //car.shiftGear(car.getTransmission().getGearStateDrive());
+        //car.pushAccelerator();
+
         car.startCar();
 
+        car.openDoor();
         car.pushAccelerator();
         car.pushAccelerator();
         car.closeDoor();

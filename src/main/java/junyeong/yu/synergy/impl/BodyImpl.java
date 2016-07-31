@@ -7,7 +7,7 @@ import junyeong.yu.synergy.Body;
  */
 public class BodyImpl implements Body {
 
-    private boolean openDoor = true;
+    private boolean openDoor = false;
 
     @Override
     public void openDoor() {

@@ -15,6 +15,10 @@ abstract public class GearStateBase implements GearState {
 
     @Override
     public void pushBreaker() {
+        if (time.getCurrentSpeed() == 0) {
+            System.out.println("Car is already stopped. Breaking is useless.");
+            return;
+        }
         time.speedDown(Time.BREAKER_SPEED_UNIT);
         System.out.println("Car speed is decreased. Current speed is " + time.getCurrentSpeed() + " km/hour");
     }

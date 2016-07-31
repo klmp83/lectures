@@ -27,6 +27,10 @@ public class CarImpl implements Car {
         transmission.setTime(time);
     }
 
+    public Transmission getTransmission() {
+        return this.transmission;
+    }
+
     @Override
 	public void startCar() { // preparation of car to move. not including moving.
         pushBreaker();
