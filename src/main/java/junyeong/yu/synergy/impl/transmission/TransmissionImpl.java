@@ -11,7 +11,7 @@ import junyeong.yu.synergy.impl.gear.GearStateReverse;
 /**
  * Created by yujun-yeong on 16-07-28.
  */
-public class TransmissionImpl implements Transmission {
+    public class TransmissionImpl implements Transmission {
 
     private GearState gearStatePark = new GearStatePark();
     private GearState gearStateNeutral = new GearStateNeutral();
@@ -30,6 +30,10 @@ public class TransmissionImpl implements Transmission {
     @Override
     public void pushAccelerator() {
         currentGearState.pushAccelerator();
+    }
+    @Override
+    public void pushBreaker() {
+        currentGearState.pushBreaker();
     }
 
     // getters

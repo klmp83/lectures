@@ -21,6 +21,15 @@ public class Bootstrap {
         car.startCar();
 
         car.pushAccelerator();
+        car.pushAccelerator();
+        car.closeDoor();
+        car.pushAccelerator();
+        car.pushAccelerator();
+        car.openDoor();
+        car.pushBreaker();
+        car.openDoor();
+        car.pushBreaker();
+        car.openDoor();
 
         car.stopCar();
     }

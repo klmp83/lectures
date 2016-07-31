@@ -9,7 +9,7 @@ import junyeong.yu.synergy.Time;
 public class GearStateReverse extends GearStateBase {
     @Override
     public void pushAccelerator() {
-        System.out.println("Car is moving backward");
         time.speedUp(Time.ACCELERATOR_SPEED_UNIT);
+        System.out.println("Car is moving backward. Current speed is " + time.getCurrentSpeed() + "km/hour");
     }
 }

@@ -9,7 +9,7 @@ import junyeong.yu.synergy.Time;
 public class GearStateDrive extends GearStateBase {
     @Override
     public void pushAccelerator() {
-        System.out.println("Car is moving forward");
         time.speedUp(Time.ACCELERATOR_SPEED_UNIT);
+        System.out.println("Car is moving forward. Current speed is " + time.getCurrentSpeed() + "km/hour");
     }
 }

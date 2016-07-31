@@ -10,6 +10,8 @@ public class CarImpl implements Car {
 	private GasTank gasTank;
 	private Transmission transmission;
 
+    private Time time;
+
     public void setBody(Body body) {
         this.body = body;
     }
@@ -21,6 +23,7 @@ public class CarImpl implements Car {
     }
 
     public void setTime(Time time) {
+        this.time = time;
         transmission.setTime(time);
     }
 
@@ -46,7 +49,6 @@ public class CarImpl implements Car {
 	@Override
 	public void turnOn() {
         this.engine.turnOn();
-
 	}
 	@Override
 	public void turnOff() {
@@ -60,6 +62,10 @@ public class CarImpl implements Car {
 	
 	@Override
 	public void openDoor() {
+        if (time.getCurrentSpeed() > 0) {
+            System.out.println("Car is moving, so You cannot open doors. Current speed : " + time.getCurrentSpeed() + " km/hour");
+            return;
+        }
 		this.body.openDoor();
 	}
 	@Override
@@ -70,7 +76,7 @@ public class CarImpl implements Car {
 	@Override
 	public void pushAccelerator() {
         if (this.body.isOpenDoor()) {
-            System.out.println("Car doors are opened. Please close doors.");
+            System.out.println("Doors are open now. Please close doors.");
             return;
         }
         this.transmission.pushAccelerator();
@@ -84,6 +90,7 @@ public class CarImpl implements Car {
     @Override
 	public void pushBreaker() {
         //time.speedDown(Time.BREAKER_SPEED_UNIT);
+        this.transmission.pushBreaker();
 	}
 
     @Override

@@ -12,19 +12,21 @@ public class BodyImpl implements Body {
     @Override
     public void openDoor() {
         if (isOpenDoor()) {
-            System.out.println("Door is already opened");
+            System.out.println("Doors are already open");
             return;
         }
         this.openDoor = true;
+        System.out.println("Doors are open now");
     }
 
     @Override
     public void closeDoor() {
         if (isOpenDoor() == false) {
-            System.out.println("Door is already closed");
+            System.out.println("Doors are already closed");
             return;
         }
         this.openDoor = false;
+        System.out.println("Doors are closed now");
     }
 
     @Override
