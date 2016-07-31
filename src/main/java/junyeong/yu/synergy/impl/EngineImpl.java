@@ -15,8 +15,6 @@ public class EngineImpl implements Engine {
 
         System.out.println("Engine is running now");
         this.currentEngineState = ENGINE_STATE_RUNNING;
-
-
     }
 
     @Override

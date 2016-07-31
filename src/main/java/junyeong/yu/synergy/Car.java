@@ -30,7 +30,7 @@ public interface Car {
 	public String getEngineState(); // running / stop
 	public String getOilLevel();
 	public String getGasTankLevel();
-	public String getStateOfDoor(); // open / close
+	public boolean isOpenDoor(); // open / close
 	public GearState getStateOfTransmission(); // Neutral / Drive / Park / Reverse
 	
 	// Question one: What is diffeneces between oil level and gas tank level?

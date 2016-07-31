@@ -1,6 +1,7 @@
 package junyeong.yu.synergy.impl.transmission;
 
 import junyeong.yu.synergy.GearState;
+import junyeong.yu.synergy.Time;
 import junyeong.yu.synergy.Transmission;
 import junyeong.yu.synergy.impl.gear.GearStateDrive;
 import junyeong.yu.synergy.impl.gear.GearStateNeutral;
@@ -18,6 +19,20 @@ public class TransmissionImpl implements Transmission {
     private GearState gearStateReverse = new GearStateReverse();
     private GearState currentGearState = gearStatePark;
 
+    @Override
+    public void setTime(Time time) {
+        this.gearStatePark.setTime(time);
+        this.gearStateNeutral.setTime(time);
+        this.gearStateDrive.setTime(time);
+        this.gearStateReverse.setTime(time);
+    }
+
+    @Override
+    public void pushAccelerator() {
+        currentGearState.pushAccelerator();
+    }
+
+    // getters
     @Override
     public GearState getGearStateNeutral() {
         return gearStateNeutral;
@@ -39,12 +54,12 @@ public class TransmissionImpl implements Transmission {
     }
 
     @Override
-    public void shiftGear(GearState gearState) {
-        this.currentGearState = gearState;
+    public GearState getStateOfTransmission() {
+        return this.currentGearState;
     }
 
     @Override
-    public GearState getStateOfTransmission() {
-        return this.currentGearState;
+    public void shiftGear(GearState gearState) {
+        this.currentGearState = gearState;
     }
 }

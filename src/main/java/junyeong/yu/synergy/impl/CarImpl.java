@@ -10,16 +10,15 @@ public class CarImpl implements Car {
 	private GasTank gasTank;
 	private Transmission transmission;
 
-    private Time time;
-
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
     public void setTransmission(Transmission transmission) {
         this.transmission = transmission;
     }
+
     public void setTime(Time time) {
-        this.time = time;
+        transmission.setTime(time);
     }
 
     @Override
@@ -33,14 +32,6 @@ public class CarImpl implements Car {
 		//pushAccelerator();
 	}
 
-    /*@Override
-    public void moveCar() {
-        pushAccelerator();
-        releaseAccelerator();
-        pushBreaker();
-        releaseBreaker();
-    }*/
-
     @Override
 	public void stopCar() {
 		pushBreaker();
@@ -51,31 +42,31 @@ public class CarImpl implements Car {
 	
 	@Override
 	public void turnOn() {
-        engine.turnOn();
+        this.engine.turnOn();
 
 	}
 	@Override
 	public void turnOff() {
-		engine.turnOff();
+		this.engine.turnOff();
 	}
 	
 	@Override
 	public void shiftGear(GearState gearState) {
-		transmission.shiftGear(gearState);
+		this.transmission.shiftGear(gearState);
 	}
 	
 	@Override
 	public void openDoor() {
-		body.openDoor();
+		this.body.openDoor();
 	}
 	@Override
 	public void closeDoor() {
-		body.closeDoor();
+		this.body.closeDoor();
 	}
 	
 	@Override
 	public void pushAccelerator() {
-		// TODO Auto-generated method stub
+        this.transmission.pushAccelerator();
 	}
 
     @Override
@@ -85,7 +76,7 @@ public class CarImpl implements Car {
 
     @Override
 	public void pushBreaker() {
-		// TODO Auto-generated method stub
+        //time.speedDown(Time.BREAKER_SPEED_UNIT);
 	}
 
     @Override
@@ -111,8 +102,8 @@ public class CarImpl implements Car {
 		return gasTank.getGasTankLevel();
 	}
 	@Override
-	public String getStateOfDoor() {
-		return body.getStateOfDoor();
+	public boolean isOpenDoor() {
+        return body.isOpenDoor();
 	}
 	@Override
 	public GearState getStateOfTransmission() {

@@ -21,6 +21,5 @@ public class Bootstrap {
         car.pushAccelerator();
 
         car.stopCar();
-
     }
 }

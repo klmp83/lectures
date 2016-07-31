@@ -5,5 +5,5 @@ public interface Body {
 	public void closeDoor();
 	
 	// TODO : below return types should be changed to proper types
-	public String getStateOfDoor(); // open / close
+	public boolean isOpenDoor(); // open / close
 }
