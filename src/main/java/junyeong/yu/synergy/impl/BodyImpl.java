@@ -29,6 +29,6 @@ public class BodyImpl implements Body {
 
     @Override
     public boolean isOpenDoor() {
-        return openDoor;
+        return this.openDoor;
     }
 }

@@ -10,6 +10,9 @@ public class CarImpl implements Car {
 	private GasTank gasTank;
 	private Transmission transmission;
 
+    public void setBody(Body body) {
+        this.body = body;
+    }
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
@@ -66,6 +69,10 @@ public class CarImpl implements Car {
 	
 	@Override
 	public void pushAccelerator() {
+        if (this.body.isOpenDoor()) {
+            System.out.println("Car doors are opened. Please close doors.");
+            return;
+        }
         this.transmission.pushAccelerator();
 	}
 
