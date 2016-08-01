@@ -5,7 +5,7 @@ import junyeong.yu.synergy.impl.BodyImpl;
 import junyeong.yu.synergy.impl.CarImpl;
 import junyeong.yu.synergy.impl.EngineImpl;
 import junyeong.yu.synergy.impl.TimeImpl;
-import junyeong.yu.synergy.impl.transmission.TransmissionImpl;
+import junyeong.yu.synergy.impl.TransmissionImpl;
 
 /**
  * Created by yujun-yeong on 16-07-31.

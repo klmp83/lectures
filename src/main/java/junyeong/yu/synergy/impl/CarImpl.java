@@ -93,18 +93,17 @@ public class CarImpl implements Car {
 
     @Override
     public void releaseAccelerator() {
-        // TODO Auto-generated method stub
+        System.out.println("Accelerator is released");
     }
 
     @Override
 	public void pushBreaker() {
-        //time.speedDown(Time.BREAKER_SPEED_UNIT);
         this.transmission.pushBreaker();
 	}
 
     @Override
     public void releaseBreaker() {
-        // TODO Auto-generated method stub
+        System.out.println("Breaker is released");
     }
 
     @Override
@@ -132,5 +131,4 @@ public class CarImpl implements Car {
 	public GearState getStateOfTransmission() {
 		return this.transmission.getStateOfTransmission();
 	}
-
 }

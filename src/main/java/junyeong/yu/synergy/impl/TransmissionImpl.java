@@ -1,4 +1,4 @@
-package junyeong.yu.synergy.impl.transmission;
+package junyeong.yu.synergy.impl;
 
 import junyeong.yu.synergy.GearState;
 import junyeong.yu.synergy.Time;
