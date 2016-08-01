@@ -1,6 +1,7 @@
 package junyeong.yu.synergy.impl.init;
 
 import junyeong.yu.synergy.Car;
+import junyeong.yu.synergy.Time;
 import junyeong.yu.synergy.impl.BodyImpl;
 import junyeong.yu.synergy.impl.CarImpl;
 import junyeong.yu.synergy.impl.EngineImpl;
@@ -26,7 +27,9 @@ public class Bootstrap {
         car.pushAccelerator();
         car.closeDoor();
         car.pushAccelerator();
+        car.elapsed(Time.DAY);
         car.pushAccelerator();
+        car.elapsed(Time.DAY);
         car.openDoor();
         car.pushBreaker();
         car.openDoor();

@@ -76,8 +76,13 @@ public class CarImpl implements Car {
 	public void closeDoor() {
 		this.body.closeDoor();
 	}
-	
-	@Override
+
+    @Override
+    public void elapsed(long millisecond) {
+        this.time.elapsed(millisecond);
+    }
+
+    @Override
 	public void pushAccelerator() {
         if (this.body.isOpenDoor()) {
             System.out.println("Doors are open now. Please close doors.");
@@ -109,23 +114,23 @@ public class CarImpl implements Car {
 	}
 	@Override
 	public String getEngineState() {
-		return engine.getEngineState();
+		return this.engine.getEngineState();
 	}
 	@Override
 	public String getOilLevel() {
-		return engine.getOilLevel();
+		return this.engine.getOilLevel();
 	}
 	@Override
 	public String getGasTankLevel() {
-		return gasTank.getGasTankLevel();
+		return this.gasTank.getGasTankLevel();
 	}
 	@Override
 	public boolean isOpenDoor() {
-        return body.isOpenDoor();
+        return this.body.isOpenDoor();
 	}
 	@Override
 	public GearState getStateOfTransmission() {
-		return transmission.getStateOfTransmission();
+		return this.transmission.getStateOfTransmission();
 	}
 
 }

@@ -7,7 +7,7 @@ import junyeong.yu.synergy.Time;
  */
 public class TimeImpl implements Time {
 
-    private long elapsedTime = 0; // millisecond
+    private long totalElapsedTime = 0; // millisecond
     private int currentSpeed = 0; // kilometer per hour
     private double currentMilege = 0; // kilometer
 
@@ -18,7 +18,9 @@ public class TimeImpl implements Time {
             // 60 * 1,800,000 / 3,600,000 => 30 (km)
             this.currentMilege += this.currentSpeed * millisecond / HOUR;
         }
-        this.elapsedTime += millisecond;
+        this.totalElapsedTime += millisecond;
+
+        System.out.println("Time is elapsed for " + millisecond + "ms, total: " + this.totalElapsedTime + "ms, total milege: " + this.currentMilege + "km");
     }
 
     @Override

@@ -19,7 +19,7 @@ public class EngineImpl implements Engine {
 
     @Override
     public void turnOff() {
-        // TODO : need to implement
+        System.out.println("Engine is turning off now");
     }
 
     @Override

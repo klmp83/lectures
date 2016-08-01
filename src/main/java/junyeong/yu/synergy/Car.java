@@ -19,7 +19,9 @@ public interface Car {
 	public void shiftGear(GearState gearState); // Neutral / Drive / Park / Reverse
 	public void openDoor(); // check door before staring engine
 	public void closeDoor();
-	
+
+    public void elapsed(long millisecond);
+
 	public void pushAccelerator();
 	public void releaseAccelerator();
     public void pushBreaker();

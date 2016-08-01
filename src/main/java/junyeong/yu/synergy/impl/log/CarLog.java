@@ -57,6 +57,12 @@ public class CarLog implements Car {
     }
 
     @Override
+    public void elapsed(long millisecond) {
+        print("elapsed(millisecond)");
+        car.elapsed(millisecond);
+    }
+
+    @Override
     public void pushAccelerator() {
         print("pushAccelerator()");
         car.pushAccelerator();
