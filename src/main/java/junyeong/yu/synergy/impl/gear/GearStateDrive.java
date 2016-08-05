@@ -12,4 +12,9 @@ public class GearStateDrive extends GearStateBase {
         time.speedUp(Time.ACCELERATOR_SPEED_UNIT);
         System.out.println("Car is moving forward. Current speed is " + time.getCurrentSpeed() + "km/hour");
     }
+
+    @Override
+    public String getGearState() {
+        return "drive";
+    }
 }

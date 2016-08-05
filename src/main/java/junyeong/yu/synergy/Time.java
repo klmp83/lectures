@@ -17,5 +17,6 @@ public interface Time {
     public void speedDown(int kilometerPerHour);
 
     public int getCurrentSpeed();
-    public double getCurrentMileage();
+    public double getTotalMileage();
+    public double getEstimatedMileage(long millisecond);
 }

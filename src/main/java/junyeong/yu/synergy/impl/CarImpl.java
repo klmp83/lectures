@@ -2,6 +2,7 @@ package junyeong.yu.synergy.impl;
 
 
 import junyeong.yu.synergy.*;
+import junyeong.yu.synergy.exception.CarException;
 
 // TODO : remove abstract & implement --> temporarily remain due to compile error
 public class CarImpl implements Car {
@@ -17,6 +18,9 @@ public class CarImpl implements Car {
     }
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+    public void setGasTank(GasTank gasTank) {
+        this.gasTank = gasTank;
     }
     public void setTransmission(Transmission transmission) {
         this.transmission = transmission;
@@ -79,7 +83,24 @@ public class CarImpl implements Car {
 
     @Override
     public void elapsed(long millisecond) {
+        /*double previousMilege = this.time.getTotalMileage();
+        if (this.time.getEstimatedMileage(millisecond))
+
         this.time.elapsed(millisecond);
+        double movedMilege = time.getTotalMileage() - previousMilege;*/
+
+        double movedMilege = this.time.getEstimatedMileage(millisecond);
+
+        try {
+            // 1 liter per kilometer
+            this.gasTank.useGasoline(movedMilege);
+            this.time.elapsed(millisecond);
+            if (GasTank.LOW_GAS_ON.equals(this.gasTank.getGasTankLevel())) {
+                System.out.println("Current gasoline is below 10% of gasoline maximum gas level.");
+            }
+        } catch (CarException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -107,9 +128,21 @@ public class CarImpl implements Car {
     }
 
     @Override
+    public void insertGasoline(double liter) {
+        this.gasTank.insertGasoline(liter);
+    }
+
+    @Override
+    public void insertOil() {
+        this.engine.insertOil();
+    }
+
+    @Override
 	public String getCarState() {
-		// TODO Auto-generated method stub
-		return null;
+        if (Engine.ENGINE_STATE_RUNNING.equals(engine.getEngineState())) {
+            return "moving";
+        }
+		return "stop";
 	}
 	@Override
 	public String getEngineState() {

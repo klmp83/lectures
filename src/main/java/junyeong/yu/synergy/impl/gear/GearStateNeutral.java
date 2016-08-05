@@ -11,4 +11,9 @@ public class GearStateNeutral extends GearStateBase {
     public void pushAccelerator() {
         System.out.println("Accelerator does not work when gear is neutral");
     }
+
+    @Override
+    public String getGearState() {
+        return "neutral";
+    }
 }

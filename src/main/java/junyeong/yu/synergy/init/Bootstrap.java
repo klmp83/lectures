@@ -1,6 +1,7 @@
-package junyeong.yu.synergy.impl.init;
+package junyeong.yu.synergy.init;
 
 import junyeong.yu.synergy.Car;
+import junyeong.yu.synergy.GasTank;
 import junyeong.yu.synergy.GearState;
 import junyeong.yu.synergy.Time;
 import junyeong.yu.synergy.impl.log.CarLog;
@@ -16,6 +17,9 @@ public class Bootstrap {
         car.closeDoor();
         //car.pushAccelerator();
 
+        car.insertGasoline(60); // 11 liters
+        car.insertOil();
+
         car.startCar();
 
         car.openDoor();
@@ -23,9 +27,13 @@ public class Bootstrap {
         car.pushAccelerator();
         car.closeDoor();
         car.pushAccelerator();
-        car.elapsed(Time.DAY);
+        car.elapsed(Time.HOUR); //twenty liter used - 40 liter left
+        car.elapsed(Time.HOUR);
+        car.elapsed(Time.HOUR);
         car.pushAccelerator();
-        car.elapsed(Time.DAY);
+        car.insertGasoline(6000000); // will not be inserted.
+        car.insertGasoline(GasTank.MAXIMUM_GASOLINE);
+        car.elapsed(Time.DAY); //40 is not enough for a day
         car.openDoor();
         car.pushBreaker();
         car.openDoor();
@@ -33,6 +41,15 @@ public class Bootstrap {
         car.openDoor();
 
         car.stopCar();
+
+        System.out.println();
+        System.out.println("--- Current State of Car ---");
+        System.out.println("Car State : " + car.getCarState());
+        System.out.println("Engine State : " + car.getEngineState());
+        System.out.println("Oil Level : " + car.getOilLevel());
+        System.out.println("Gas Tank Alarm State : " + car.getGasTankLevel());
+        System.out.println("State of Doors : " + (car.isOpenDoor() ? "open" : "close"));
+        System.out.println("State of Transmission : " + car.getStateOfTransmission().getGearState());
 
 
         // Developed Function
@@ -57,7 +74,7 @@ public class Bootstrap {
         public String getEngineState(); // running / stop
         public String getOilLevel();
         public String getGasTankLevel();
-        public boolean isOpenDoor(); // open / close
+        //public boolean isOpenDoor(); // open / close
         public GearState getStateOfTransmission(); // Neutral / Drive / Park / Reverse
         */
 

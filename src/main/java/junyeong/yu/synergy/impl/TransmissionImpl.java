@@ -28,6 +28,11 @@ import junyeong.yu.synergy.impl.gear.GearStateReverse;
     }
 
     @Override
+    public String getGearState() {
+        return this.currentGearState.getGearState();
+    }
+
+    @Override
     public void pushAccelerator() {
         currentGearState.pushAccelerator();
     }

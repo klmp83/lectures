@@ -16,4 +16,9 @@ public class GearStatePark extends GearStateBase {
     public void pushBreaker() {
         System.out.println("Car is already parked. However, to shift gear, breaker is used");
     }
+
+    @Override
+    public String getGearState() {
+        return "park";
+    }
 }

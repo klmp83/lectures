@@ -87,6 +87,18 @@ public class CarLog implements Car {
     }
 
     @Override
+    public void insertGasoline(double liter) {
+        print("insertGasoline(liter)");
+        car.insertGasoline(liter);
+    }
+
+    @Override
+    public void insertOil() {
+        print("insertOil()");
+        car.insertOil();
+    }
+
+    @Override
     public String getCarState() {
         print("getCarState()");
         return car.getCarState();

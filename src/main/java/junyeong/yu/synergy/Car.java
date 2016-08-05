@@ -27,14 +27,13 @@ public interface Car {
     public void pushBreaker();
     public void releaseBreaker();
 
-	// TODO : below return types should be changed to proper types
+    public void insertGasoline(double liter); // 1 Liters per 1km
+    public void insertOil();
+
 	public String getCarState(); // moving / stop
 	public String getEngineState(); // running / stop
 	public String getOilLevel();
-	public String getGasTankLevel();
+	public String getGasTankLevel(); // low gas on/off
 	public boolean isOpenDoor(); // open / close
 	public GearState getStateOfTransmission(); // Neutral / Drive / Park / Reverse
-	
-	// Question one: What is diffeneces between oil level and gas tank level?
-	// Question two: Is it ok not to add accelerating & breaking?
 }
