@@ -4,9 +4,17 @@ import com.car.synergy.Car;
 import com.car.synergy.impl.*;
 
 /**
- * Created by yujun-yeong on 16-07-31.
+ * this class CarFactory provides Car object.
+ *
+ * @author Junghwan Yang, Junyeong Yu
+ * @version August 5, 2016
  */
 public class CarFactory {
+
+    /**
+     * this method provides car object
+     * @return car object
+     */
     public Car createCar() {
         CarImpl car = new CarImpl();
         car.setBody(new BodyImpl());

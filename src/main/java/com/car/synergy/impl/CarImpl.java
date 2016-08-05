@@ -5,7 +5,7 @@ import com.car.synergy.*;
 import com.car.synergy.exception.CarException;
 
 /**
- * This class CarImpl defines/models the interface of Car.
+ * this class CarImpl defines/models the interface of Car.
  *
  * @author Junghwan Yang, Junyeong Yu
  * @version August 5, 2016
@@ -243,6 +243,7 @@ public class CarImpl implements Car {
 	public boolean isOpenDoor() {
         return this.body.isOpenDoor();
 	}
+
     /**
      * this method is getting transmission state
      */

@@ -6,9 +6,17 @@ import com.car.synergy.Time;
 import com.car.synergy.impl.log.CarLog;
 
 /**
- * Created by yujun-yeong on 16-07-28.
+ * This class Bootstrap provides the entry point of Car program.
+ *
+ * @author Junghwan Yang, Junyeong Yu
+ * @version August 5, 2016
  */
 public class Bootstrap {
+
+    /**
+     * entry point of Car product
+     * @param args
+     */
     public static void main(String[] args) {
         CarFactory factory = new CarFactory();
         Car car = new CarLog(factory.createCar()); // with log

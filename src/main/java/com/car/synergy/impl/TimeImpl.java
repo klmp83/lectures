@@ -3,7 +3,10 @@ package com.car.synergy.impl;
 import com.car.synergy.Time;
 
 /**
- * Created by yujun-yeong on 16-07-28.
+ * this class TimeImpl defines/models the interface of Time.
+ *
+ * @author Junghwan Yang, Junyeong Yu
+ * @version August 5, 2016
  */
 public class TimeImpl implements Time {
 
@@ -11,6 +14,10 @@ public class TimeImpl implements Time {
     private int currentSpeed = 0; // kilometer per hour
     private double totalMilege = 0; // kilometer
 
+    /**
+     * this method is calculating the distance
+     * @param millisecond to set the time
+     */
     @Override
     public void elapsed(long millisecond) {
         if (this.currentSpeed > 0) { // speed is per hour
@@ -23,11 +30,19 @@ public class TimeImpl implements Time {
         System.out.println("Time is elapsed for " + millisecond + "ms, total: " + this.totalElapsedTime + "ms, total milege: " + this.totalMilege + "km");
     }
 
+    /**
+     * this method is speeding up car
+     * @param kilometerPerHour
+     */
     @Override
     public void speedUp(int kilometerPerHour) {
         this.currentSpeed += kilometerPerHour;
     }
 
+    /**
+     * this method is speeding down car
+     * @param kilometerPerHour
+     */
     @Override
     public void speedDown(int kilometerPerHour) {
         this.currentSpeed -= kilometerPerHour;
@@ -36,14 +51,29 @@ public class TimeImpl implements Time {
         }
     }
 
+    /**
+     * this method is getting current speed per hour
+     * @return current speed of car
+     */
     @Override
     public int getCurrentSpeed() {
         return this.currentSpeed;
     }
+
+    /**
+     * this method is getting total mileage of car
+     * @return total mileage of car
+     */
     @Override
     public double getTotalMileage() {
         return this.totalMilege;
     }
+
+    /**
+     * this method is getting estimated mileage for putting gasoline in gas tank
+     * @param millisecond to set millisecond for time
+     * @return estimate mileage of car for specific time
+     */
     @Override
     public double getEstimatedMileage(long millisecond) {
         return this.currentSpeed * millisecond / HOUR;
