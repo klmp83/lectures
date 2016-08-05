@@ -3,12 +3,18 @@ package com.car.synergy.impl;
 import com.car.synergy.Body;
 
 /**
- * Created by yujun-yeong on 16-07-31.
+ * This class BodyImpl defines/models the interface of Body.
+ *
+ * @author Junghwan Yang, Junyeong Yu
+ * @version August 5, 2016
  */
 public class BodyImpl implements Body {
 
-    private boolean openDoor = false;
+    private boolean openDoor = false; //door state
 
+    /**
+     * this method is opening the door
+     */
     @Override
     public void openDoor() {
         if (isOpenDoor()) {
@@ -19,6 +25,9 @@ public class BodyImpl implements Body {
         System.out.println("Doors are open now");
     }
 
+    /**
+     * this method is closing the door
+     */
     @Override
     public void closeDoor() {
         if (isOpenDoor() == false) {
@@ -29,6 +38,9 @@ public class BodyImpl implements Body {
         System.out.println("Doors are closed now");
     }
 
+    /**
+     * this method is checking the door
+     */
     @Override
     public boolean isOpenDoor() {
         return this.openDoor;

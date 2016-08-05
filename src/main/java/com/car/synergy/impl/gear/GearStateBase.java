@@ -4,15 +4,26 @@ import com.car.synergy.GearState;
 import com.car.synergy.Time;
 
 /**
- * Created by yujun-yeong on 16-07-31.
+ * This class GearStateBase defines/models the abstract class of GearStateBase.
+ *
+ * @author Junghwan Yang, Junyeong Yu
+ * @version August 5, 2016
  */
 abstract public class GearStateBase implements GearState {
-    protected Time time;
+
+    protected Time time; //time object reflected the time for car
+
+    /**
+     * This method is setting the time
+     * @param time to set the time
+     */
     @Override
     public void setTime(Time time) {
         this.time = time;
     }
-
+    /**
+     * This method is pushing the break
+     */
     @Override
     public void pushBreaker() {
         if (time.getCurrentSpeed() == 0) {
