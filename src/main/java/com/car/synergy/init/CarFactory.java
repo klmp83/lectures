@@ -1,7 +1,7 @@
-package junyeong.yu.synergy.init;
+package com.car.synergy.init;
 
-import junyeong.yu.synergy.Car;
-import junyeong.yu.synergy.impl.*;
+import com.car.synergy.Car;
+import com.car.synergy.impl.*;
 
 /**
  * Created by yujun-yeong on 16-07-31.

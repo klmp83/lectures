@@ -1,8 +1,8 @@
-package junyeong.yu.synergy.impl;
+package com.car.synergy.impl;
 
 
-import junyeong.yu.synergy.*;
-import junyeong.yu.synergy.exception.CarException;
+import com.car.synergy.*;
+import com.car.synergy.exception.CarException;
 
 // TODO : remove abstract & implement --> temporarily remain due to compile error
 public class CarImpl implements Car {

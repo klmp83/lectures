@@ -1,10 +1,9 @@
-package junyeong.yu.synergy.init;
+package com.car.synergy.init;
 
-import junyeong.yu.synergy.Car;
-import junyeong.yu.synergy.GasTank;
-import junyeong.yu.synergy.GearState;
-import junyeong.yu.synergy.Time;
-import junyeong.yu.synergy.impl.log.CarLog;
+import com.car.synergy.Car;
+import com.car.synergy.GasTank;
+import com.car.synergy.Time;
+import com.car.synergy.impl.log.CarLog;
 
 /**
  * Created by yujun-yeong on 16-07-28.

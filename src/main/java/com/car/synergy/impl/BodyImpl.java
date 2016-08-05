@@ -1,6 +1,6 @@
-package junyeong.yu.synergy.impl;
+package com.car.synergy.impl;
 
-import junyeong.yu.synergy.Body;
+import com.car.synergy.Body;
 
 /**
  * Created by yujun-yeong on 16-07-31.

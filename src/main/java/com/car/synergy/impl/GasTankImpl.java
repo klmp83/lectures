@@ -1,7 +1,7 @@
-package junyeong.yu.synergy.impl;
+package com.car.synergy.impl;
 
-import junyeong.yu.synergy.GasTank;
-import junyeong.yu.synergy.exception.GasTankException;
+import com.car.synergy.GasTank;
+import com.car.synergy.exception.GasTankException;
 
 /**
  * Created by yujun-yeong on 16-08-05.

@@ -1,4 +1,4 @@
-package junyeong.yu.synergy.exception;
+package com.car.synergy.exception;
 
 /**
  * Created by yujun-yeong on 16-08-05.

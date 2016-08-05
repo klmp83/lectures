@@ -1,6 +1,6 @@
-package junyeong.yu.synergy.impl;
+package com.car.synergy.impl;
 
-import junyeong.yu.synergy.Time;
+import com.car.synergy.Time;
 
 /**
  * Created by yujun-yeong on 16-07-28.

@@ -1,4 +1,4 @@
-package junyeong.yu.synergy;
+package com.car.synergy;
 
 public interface GasTank {
 

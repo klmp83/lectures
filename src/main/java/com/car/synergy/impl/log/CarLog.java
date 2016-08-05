@@ -1,7 +1,7 @@
-package junyeong.yu.synergy.impl.log;
+package com.car.synergy.impl.log;
 
-import junyeong.yu.synergy.Car;
-import junyeong.yu.synergy.GearState;
+import com.car.synergy.Car;
+import com.car.synergy.GearState;
 
 /**
  * Created by yujun-yeong on 16-07-31.

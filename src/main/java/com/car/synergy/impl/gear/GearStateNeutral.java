@@ -1,7 +1,4 @@
-package junyeong.yu.synergy.impl.gear;
-
-import junyeong.yu.synergy.GearState;
-import junyeong.yu.synergy.Time;
+package com.car.synergy.impl.gear;
 
 /**
  * Created by yujun-yeong on 16-07-28.

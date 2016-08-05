@@ -1,12 +1,12 @@
-package junyeong.yu.synergy.impl;
+package com.car.synergy.impl;
 
-import junyeong.yu.synergy.GearState;
-import junyeong.yu.synergy.Time;
-import junyeong.yu.synergy.Transmission;
-import junyeong.yu.synergy.impl.gear.GearStateDrive;
-import junyeong.yu.synergy.impl.gear.GearStateNeutral;
-import junyeong.yu.synergy.impl.gear.GearStatePark;
-import junyeong.yu.synergy.impl.gear.GearStateReverse;
+import com.car.synergy.GearState;
+import com.car.synergy.Time;
+import com.car.synergy.Transmission;
+import com.car.synergy.impl.gear.GearStateDrive;
+import com.car.synergy.impl.gear.GearStateNeutral;
+import com.car.synergy.impl.gear.GearStatePark;
+import com.car.synergy.impl.gear.GearStateReverse;
 
 /**
  * Created by yujun-yeong on 16-07-28.
