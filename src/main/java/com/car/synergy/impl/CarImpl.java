@@ -4,7 +4,6 @@ package com.car.synergy.impl;
 import com.car.synergy.*;
 import com.car.synergy.exception.CarException;
 
-// TODO : remove abstract & implement --> temporarily remain due to compile error
 public class CarImpl implements Car {
 	private Body body;
 	private Engine engine;
@@ -31,10 +30,6 @@ public class CarImpl implements Car {
         transmission.setTime(time);
     }
 
-    public Transmission getTransmission() {
-        return this.transmission;
-    }
-
     @Override
 	public void startCar() { // preparation of car to move. not including moving.
         pushBreaker();
@@ -42,8 +37,6 @@ public class CarImpl implements Car {
         releaseBreaker();
         turnOn();
 		shiftGear(this.transmission.getGearStateDrive());
-		//checkDoor();
-		//pushAccelerator();
 	}
 
     @Override
@@ -83,12 +76,6 @@ public class CarImpl implements Car {
 
     @Override
     public void elapsed(long millisecond) {
-        /*double previousMilege = this.time.getTotalMileage();
-        if (this.time.getEstimatedMileage(millisecond))
-
-        this.time.elapsed(millisecond);
-        double movedMilege = time.getTotalMileage() - previousMilege;*/
-
         double movedMilege = this.time.getEstimatedMileage(millisecond);
 
         try {

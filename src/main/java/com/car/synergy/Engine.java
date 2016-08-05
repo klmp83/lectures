@@ -10,7 +10,6 @@ public interface Engine {
 
     public void insertOil();
 	
-	// TODO : below return types should be changed to proper types
-	public String getOilLevel(); // TODO : think about on/off indicator based on time(5 to 6 month)
+	public String getOilLevel(); // ok / not ok
 	public String getEngineState(); // running / stop
 }

@@ -14,7 +14,6 @@ public class Bootstrap {
         Car car = new CarLog(factory.createCar()); // with log
 
         car.closeDoor();
-        //car.pushAccelerator();
 
         car.insertGasoline(60); // 11 liters
         car.insertOil();
@@ -49,41 +48,5 @@ public class Bootstrap {
         System.out.println("Gas Tank Alarm State : " + car.getGasTankLevel());
         System.out.println("State of Doors : " + (car.isOpenDoor() ? "open" : "close"));
         System.out.println("State of Transmission : " + car.getStateOfTransmission().getGearState());
-
-
-        // Developed Function
-        /*
-        public void startCar();
-        public void stopCar();
-        public void turnOn();
-        public void turnOff();
-        public void shiftGear(GearState gearState);
-        public void openDoor();
-        public void closeDoor();
-        public void elapsed(long millisecond);
-        public void pushAccelerator();
-        public void releaseAccelerator();
-        public void pushBreaker();
-        public void releaseBreaker();
-        */
-
-        // TODO : NEED TO DEVELOP
-        /*
-        public String getCarState(); // moving / stop
-        public String getEngineState(); // running / stop
-        public String getOilLevel();
-        public String getGasTankLevel();
-        //public boolean isOpenDoor(); // open / close
-        public GearState getStateOfTransmission(); // Neutral / Drive / Park / Reverse
-        */
-
-        // TODO : TEST SCENARIOS
-        // 1. When car is driving, user tries to open door
-
-        // 2. When oil has limitation, user tries to engine on
-
-        // 3. When gas tank level is low, user tries to engine on
-
-        // 4. When engine is already on, user tries to engine on again
     }
 }

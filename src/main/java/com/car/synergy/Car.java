@@ -9,10 +9,8 @@ public interface Car {
 	//		(?)GasTank: gas tank state -> depleted / available (??consider??)
 	//		Transmission: GearState -> Neutral / Drive / Park / Reverse
 	
-	// abstract concept --> facade concept --> need to move car facade
 	public void startCar(); // how about accelerating? --> (turn on key -> turn on engine -> check oil level (gas tank level)  -> shift gear to drive -> check door)
-	//public void moveCar(); // --> DELETE because it is not function but state
-    public void stopCar(); // how about breaking? --> (breaking -> shift gear to neutral -> turn off engine)
+	public void stopCar(); // how about breaking? --> (breaking -> shift gear to neutral -> turn off engine)
 	
 	public void turnOn(); // by key
 	public void turnOff(); // by key
