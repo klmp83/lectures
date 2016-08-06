@@ -85,7 +85,7 @@ public class TransmissionImpl implements Transmission {
 
 	/**
 	 * this method is getting drive gear object
-	 * @@return gearStateDrive
+	 * @return gearStateDrive
 	 */
     @Override
     public GearState getGearStateDrive() {

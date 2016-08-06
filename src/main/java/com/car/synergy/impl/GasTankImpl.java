@@ -15,7 +15,7 @@ public class GasTankImpl implements GasTank {
 
 	/**
 	 * this method is checking gas tank level
-     * @return gastank checking value
+     * @return gas tank checking value
 	 */
     @Override
     public String getGasTankLevel() {
