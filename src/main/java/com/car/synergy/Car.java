@@ -60,16 +60,34 @@ public interface Car {
      */
     public void insertOil();
 
-    /** this method is getting state */
+    /**
+     * this method is getting state
+     * @return current state of car
+     */
 	public String getCarState(); // moving / stop
-	/** this method is getting engine state */
+    /**
+     * this method is getting engine state
+     * @return current state of engine
+     */
     public String getEngineState(); // running / stop
-	/** this method is getting oil state */
+	/**
+     * this method is getting oil state
+     * @return current state of oil
+     */
     public String getOilLevel();
-	/** this method is getting gas tank state */
+	/**
+     * this method is getting gas tank state
+     * @return current state of gas tank
+     */
     public String getGasTankLevel(); // low gas on/off
-	/** this method is checking the door */
+	/**
+     * this method is checking the door
+     * @return boolean value whether doors are open or not
+     */
     public boolean isOpenDoor(); // open / close
-	/** this method is getting transmission state */
+	/**
+     * this method is getting transmission state
+     * @return current state of transmission
+     */
     public GearState getStateOfTransmission(); // Neutral / Drive / Park / Reverse
 }

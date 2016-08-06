@@ -153,6 +153,7 @@ public class CarLog implements Car {
 
     /**
      * this method is the log getting the car state
+     * @return current state of car
      */
     @Override
     public String getCarState() {
@@ -162,6 +163,7 @@ public class CarLog implements Car {
 
     /**
      * this method is the log getting the engine state
+     * @return current state of engine
      */
     @Override
     public String getEngineState() {
@@ -171,6 +173,7 @@ public class CarLog implements Car {
 
     /**
      * this method is the log getting the oil state
+     * @return current state of oil
      */
     @Override
     public String getOilLevel() {
@@ -180,6 +183,7 @@ public class CarLog implements Car {
 
     /**
      * this method is the log getting the gas tank state
+     * @return current state of gas tank
      */
     @Override
     public String getGasTankLevel() {
@@ -189,6 +193,7 @@ public class CarLog implements Car {
 
     /**
      * this method is the log checking the door state
+     * @return boolean value whether doors are open or not
      */
     @Override
     public boolean isOpenDoor() {
@@ -198,6 +203,7 @@ public class CarLog implements Car {
 
     /**
      * this method is the log getting the transmission state
+     * @return current state of transmission
      */
     @Override
     public GearState getStateOfTransmission() {

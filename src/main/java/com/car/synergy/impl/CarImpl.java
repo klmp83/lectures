@@ -202,6 +202,7 @@ public class CarImpl implements Car {
 
     /**
      * this method is getting state
+     * @return current state of car
      */
     @Override
 	public String getCarState() {
@@ -213,6 +214,7 @@ public class CarImpl implements Car {
 
     /**
      * this method is getting engine state
+     * @return current state of engine
      */
 	@Override
 	public String getEngineState() {
@@ -221,6 +223,7 @@ public class CarImpl implements Car {
 
     /**
      * this method is getting oil state
+     * @return current state of oil
      */
 	@Override
 	public String getOilLevel() {
@@ -229,6 +232,7 @@ public class CarImpl implements Car {
 
     /**
      * this method is getting gas tank state
+     * @return current state of gas tank
      */
 	@Override
 	public String getGasTankLevel() {
@@ -237,7 +241,7 @@ public class CarImpl implements Car {
 
     /**
      * this method is checking the door
-     *
+     * @return boolean value whether doors are open or not
      */
 	@Override
 	public boolean isOpenDoor() {
@@ -246,6 +250,7 @@ public class CarImpl implements Car {
 
     /**
      * this method is getting transmission state
+     * @return current state of transmission
      */
 	@Override
 	public GearState getStateOfTransmission() {
