@@ -30,6 +30,7 @@ public interface GasTank {
 
     /**
 	 * this method is getting gas level
+     * @return gas currnt state
 	 */
     public double getGasoline(); // liters
 }

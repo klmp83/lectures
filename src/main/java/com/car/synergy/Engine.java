@@ -27,11 +27,13 @@ public interface Engine {
 
 	/**
 	 * this method is checking oil state
+     * @return current oil level
 	 */
 	public String getOilLevel(); // ok / not ok
 
 	/**
 	 * this method is checking engine state
+     * @return current engine state
 	 */
 	public String getEngineState(); // running / stop
 }

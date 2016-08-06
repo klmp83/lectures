@@ -51,6 +51,7 @@ public class TransmissionImpl implements Transmission {
 
 	/**
 	 * this method is getting gear state
+	 * @return current gear state
 	 */
     @Override
     public String getGearState() {
@@ -75,6 +76,7 @@ public class TransmissionImpl implements Transmission {
 
 	/**
 	 * this method is getting neutral gear object
+	 * @return gearStateNeutral
 	 */
     @Override
     public GearState getGearStateNeutral() {
@@ -83,6 +85,7 @@ public class TransmissionImpl implements Transmission {
 
 	/**
 	 * this method is getting drive gear object
+	 * @@return gearStateDrive
 	 */
     @Override
     public GearState getGearStateDrive() {
@@ -91,6 +94,7 @@ public class TransmissionImpl implements Transmission {
 
 	/**
 	 * this method is getting park gear object
+	 * @return gearStatePark
 	 */
     @Override
     public GearState getGearStatePark() {
@@ -99,6 +103,7 @@ public class TransmissionImpl implements Transmission {
 
 	/**
 	 * this method is getting reverse gear object
+	 * @return gearStateReverse
 	 */
     @Override
     public GearState getGearStateReverse() {
@@ -106,7 +111,8 @@ public class TransmissionImpl implements Transmission {
     }
 
 	/**
-	 * this method is getting current gear state
+	 * this method is getting current gear state object
+	 * @return currentGearState
 	 */
     @Override
     public GearState getStateOfTransmission() {

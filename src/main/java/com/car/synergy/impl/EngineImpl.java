@@ -52,6 +52,7 @@ public class EngineImpl implements Engine {
 
     /**
      * This method is checking oil state
+     * @return oil state
      */
     @Override
     public String getOilLevel() {
@@ -60,6 +61,7 @@ public class EngineImpl implements Engine {
 
     /**
      * This method is checking engine state
+     * @return current engine state
      */
     @Override
     public String getEngineState() {

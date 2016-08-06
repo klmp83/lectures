@@ -15,6 +15,7 @@ public class GasTankImpl implements GasTank {
 
 	/**
 	 * this method is checking gas tank level
+     * @return gastank checking value
 	 */
     @Override
     public String getGasTankLevel() {
@@ -49,6 +50,7 @@ public class GasTankImpl implements GasTank {
 
 	/**
 	 * this method is checking current gas
+     * @return current gas 
 	 */
     @Override
     public double getGasoline() {
