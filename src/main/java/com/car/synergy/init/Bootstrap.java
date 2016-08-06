@@ -4,6 +4,8 @@ import com.car.synergy.Car;
 import com.car.synergy.GasTank;
 import com.car.synergy.Time;
 import com.car.synergy.impl.log.CarLog;
+import com.car.synergy.time.CarTimeTrigger;
+import com.car.synergy.ui.CarUIComponent;
 
 /**
  * This class Bootstrap provides the entry point of Car program.
@@ -21,6 +23,22 @@ public class Bootstrap {
         CarFactory factory = new CarFactory();
         Car car = new CarLog(factory.createCar()); // with log
 
+        carProcessTerminal(car);
+        carProcessUI(car);
+    }
+
+    private static void carProcessUI(Car car) {
+        CarUIComponent carUIComponent = new CarUIComponent();
+        carUIComponent.setCar(car);
+
+        CarTimeTrigger carTimeTrigger = new CarTimeTrigger();
+        carTimeTrigger.setCar(car);
+        carTimeTrigger.startTrigger();
+
+        //carTimeTrigger.stopTrigger();
+    }
+
+    private static void carProcessTerminal(Car car) {
         car.closeDoor();
 
         car.insertGasoline(60); // 11 liters
