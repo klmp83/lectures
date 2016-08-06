@@ -15,7 +15,7 @@ public class Bootstrap {
 
     /**
      * entry point of Car product
-     * @param args
+     * @param args this argument is assigned from outside
      */
     public static void main(String[] args) {
         CarFactory factory = new CarFactory();
